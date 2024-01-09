@@ -1,0 +1,77 @@
+[
+  {
+    "breed": "トイプードル",
+    "size": "超小型",
+    "image": "https://images.dog.ceo/breeds/poodle-toy/n02113624_5659.jpg"
+  },
+  {
+    "breed": "チワワ",
+    "size": "超小型",
+    "image": "https://images.dog.ceo/breeds/chihuahua/black_chihuahua.jpg"
+  },
+  {
+    "breed": "柴犬",
+    "size": "小型",
+    "image": "https://images.dog.ceo/breeds/shiba/shiba-2.jpg"
+  },
+  {
+    "breed": "フレンチブルドッグ",
+    "size": "中型",
+    "image": "https://images.dog.ceo/breeds/bulldog-french/n02108915_5667.jpg"
+  },
+  {
+    "breed": "ポメラニアン",
+    "size": "超小型",
+    "image": "https://images.dog.ceo/breeds/pomeranian/n02112018_5738.jpg"
+  },
+  {
+    "breed": "ヨークシャーテリア",
+    "size": "超小型",
+    "image": "https://images.dog.ceo/breeds/terrier-yorkshire/n02094433_8977.jpg"
+  },
+  {
+    "breed": "パグ",
+    "size": "小型",
+    "image": "https://images.dog.ceo/breeds/pug/n02110958_1636.jpg"
+  },
+  {
+    "breed": "ゴールデンレトリバー",
+    "size": "大型",
+    "image": "https://images.dog.ceo/breeds/retriever-golden/n02099601_1010.jpg"
+  },
+  {
+    "breed": "ビションフリーゼ",
+    "size": "小型",
+    "image": "https://images.dog.ceo/breeds/frise-bichon/jh-ezio-2.jpg"
+  },
+  {
+    "breed": "シーズー",
+    "size": "小型",
+    "image": "https://images.dog.ceo/breeds/shihtzu/n02086240_1958.jpg"
+  },
+  {
+    "breed": "秋田犬",
+    "size": "大型",
+    "image": "https://images.dog.ceo/breeds/akita/Japaneseakita.jpg"
+  },
+  {
+    "breed": "チャウチャウ",
+    "size": "大型",
+    "image": "https://images.dog.ceo/breeds/chow/n02112137_1976.jpg"
+  },
+  {
+    "breed": "ボクサー",
+    "size": "大型",
+    "image": "https://images.dog.ceo/breeds/boxer/n02108089_2917.jpg"
+  },
+  {
+    "breed": "ビーグル",
+    "size": "中型",
+    "image": "https://images.dog.ceo/breeds/beagle/n02088364_14548.jpg"
+  },
+  {
+    "breed": "スタッフォードシャーブルテリア",
+    "size": "中型",
+    "image": "https://images.dog.ceo/breeds/bullterrier-staffordshire/n02093256_5007.jpg"
+  }
+]
