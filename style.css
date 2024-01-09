@@ -191,7 +191,7 @@ section p {
 
 #scrollToTopBtn {
   position: fixed;
-  bottom: 200px;
+  bottom: 150px;
   left: 6.5%;
   background-color: black;
   color: pink;
@@ -200,7 +200,6 @@ section p {
   font-size: 2rem;
   line-height: 50px;
   text-align: center;
-  bottom: 170px;
   z-index: 3000;
 }
 
@@ -244,7 +243,7 @@ section p {
   }
   #scrollToTopBtn {
     left: 3%;
-    width: 15%;
+    width: 17%;
     height: 5%;
     line-height: 30px;
     font-size: 1rem;
