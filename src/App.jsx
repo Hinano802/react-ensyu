@@ -15,8 +15,8 @@ export default function App() {
   const [dogs, setDogs] = useState([]);
   const [size, setSize] = useState("all");
   const [search, setSearch] = useState("");
-  const handleImageClick = (image) => {
-    alert(`Clicked Image: ${image}`);
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
   useEffect(() => {
     (async () => {
@@ -75,6 +75,9 @@ export default function App() {
           })}
         </main>
       </div>
+      <button id="scrollToTopBtn" onClick={scrollToTop}>
+        条件を変更する
+      </button>
       <footer>
         <p>5422083 古賀日南乃</p>
         <p>

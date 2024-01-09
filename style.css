@@ -23,9 +23,9 @@ h2 {
 
 h1 {
   color: rgb(55, 55, 55);
-  font-size: 5rem;
-  background: url(images/dog.png) no-repeat 20% center,
-    url(images/dog.png) no-repeat 80% center;
+  font-size: 4rem;
+  background: url(images/dog.png) no-repeat 5% center,
+    url(images/dog.png) no-repeat 95% center;
   background-size: 48px 48px;
 }
 
@@ -189,6 +189,21 @@ section p {
   z-index: 2000;
 }
 
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 200px;
+  left: 6.5%;
+  background-color: black;
+  color: pink;
+  width: 20%;
+  height: 7%;
+  font-size: 2rem;
+  line-height: 50px;
+  text-align: center;
+  bottom: 170px;
+  z-index: 3000;
+}
+
 /* mobile responsive styles*/
 @media screen and (max-width: 800px) {
   body,
@@ -226,5 +241,12 @@ section p {
   footer {
     grid-row: 3;
     margin-bottom: 10px;
+  }
+  #scrollToTopBtn {
+    left: 3%;
+    width: 15%;
+    height: 5%;
+    line-height: 30px;
+    font-size: 1rem;
   }
 }
