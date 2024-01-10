@@ -21,7 +21,7 @@ export default function App() {
   };
   const handleImageClick = () => {
     // 新しいウィンドウを開く
-    alert("画像がクリックされました！");
+    alert("画像がクリックされました");
     /*
     window.open(imageUrl, "_blank", "width=800,height=600");
     */
@@ -80,8 +80,7 @@ export default function App() {
                     src={jsondata.image}
                     alt={jsondata.breed}
                     onClick={() => handleImageClick(jsondata.image)}
-                    style={{ cursor: "pointer" }} // ホバー時にカーソルを変更
-                    /*onClick={handleImageClick}*/
+                    style={{ cursor: "pointer" }}
                   />
                 </section>
               );
@@ -95,6 +94,11 @@ export default function App() {
       <footer>
         <p>5422083 古賀日南乃</p>
         <p>日本大学文理学部情報科学科 Webプログラミングの演習課題</p>
+        <p>
+          Dog images are retrieved from Dog API
+          <br />
+          <a href="https://dog.ceo/dog-api/about">Donate to Dog API</a>
+        </p>
       </footer>
     </>
   );
