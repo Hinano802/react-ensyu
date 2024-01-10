@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { fetchImages } from "./api";
 
 async function fetchDogs(size, keyword) {
   const response = await fetch("dogs.json");
@@ -17,6 +18,13 @@ export default function App() {
   const [search, setSearch] = useState("");
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  const handleImageClick = () => {
+    // 新しいウィンドウを開く
+    alert("画像がクリックされました！");
+    /*
+    window.open(imageUrl, "_blank", "width=800,height=600");
+    */
   };
   useEffect(() => {
     (async () => {
@@ -68,7 +76,13 @@ export default function App() {
                 <section className={jsondata.size}>
                   <h2>{jsondata.breed}</h2>
                   <p>{jsondata.size}</p>
-                  <img src={jsondata.image} alt={jsondata.breed} />
+                  <img
+                    src={jsondata.image}
+                    alt={jsondata.breed}
+                    onClick={() => handleImageClick(jsondata.image)}
+                    style={{ cursor: "pointer" }} // ホバー時にカーソルを変更
+                    /*onClick={handleImageClick}*/
+                  />
                 </section>
               );
             }
@@ -80,10 +94,7 @@ export default function App() {
       </button>
       <footer>
         <p>5422083 古賀日南乃</p>
-        <p>
-          日本大学文理学部情報科学科 日本大学文理学部情報科学科
-          Webプログラミングの演習課題
-        </p>
+        <p>日本大学文理学部情報科学科 Webプログラミングの演習課題</p>
       </footer>
     </>
   );
