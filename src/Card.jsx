@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { DogDialog } from "./dogDialog";
+import { DogDialog } from "./DogDialog";
 
 export function Card({ data }) {
   const [dialogOpen, setDialogOpen] = useState(false);
