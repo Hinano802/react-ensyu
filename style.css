@@ -46,7 +46,7 @@ h1 {
   font-size: 2rem;
   color: pink;
   text-align: left;
-  width: 200px;
+  width: 180px;
   position: absolute;
   left: 4%;
   z-index: 1000;
@@ -249,7 +249,7 @@ section p {
   main {
     grid-row: 2;
   }
-  main h2 {
+  main h2.breed {
     font-size: 1.5rem;
     width: 100px;
   }
