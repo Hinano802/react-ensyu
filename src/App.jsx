@@ -46,7 +46,7 @@ export default function App() {
               const keyword = event.target.elements.searchTerm.value;
               const data = await fetchDogs(size, keyword);
               setDogs(data);
-              setsize(Size);
+              setSize(size);
               setSearch(keyword);
             }}
           >
@@ -89,7 +89,7 @@ export default function App() {
         </main>
       </div>
       <button id="scrollToTopBtn" onClick={scrollToTop}>
-        条件を変更する
+        ページ上部に戻る
       </button>
       <footer>
         <p>5422083 古賀日南乃</p>

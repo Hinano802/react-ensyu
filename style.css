@@ -195,14 +195,15 @@ section p {
   position: fixed;
   bottom: 150px;
   left: 6.5%;
-  background-color: black;
+  background-color: maroon;
   color: pink;
   width: 20%;
   height: 7%;
   font-size: 2rem;
-  line-height: 50px;
+  line-height: 7%; /* ボタンの高さと同じに設定 */
   text-align: center;
   z-index: 3000;
+  vertical-align: middle; /* テキストを垂直方向に中央に配置 */
 }
 
 /* mobile responsive styles*/
@@ -247,7 +248,7 @@ section p {
     left: 3%;
     width: 17%;
     height: 5%;
-    line-height: 30px;
+    line-height: 5%;
     font-size: 1rem;
   }
 }
