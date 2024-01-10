@@ -36,7 +36,7 @@ h1 {
   width: 200px;
   position: absolute;
   left: 4%;
-  z-index: 3000;
+  z-index: 100;
   text-shadow: 2px 2px 1px black;
   line-height: 2rem;
   padding-top: 0.3rem;
@@ -49,7 +49,7 @@ h1 {
   width: 200px;
   position: absolute;
   left: 4%;
-  z-index: 3000;
+  z-index: 1000;
   text-shadow: 2px 2px 1px black;
   line-height: 2rem;
   padding-top: 0.3rem;
@@ -201,7 +201,7 @@ section p {
   position: absolute;
   right: 10px;
   bottom: -6px;
-  z-index: 2000;
+  z-index: 500;
 }
 
 #scrollToTopBtn {
@@ -215,7 +215,7 @@ section p {
   font-size: 2rem;
   line-height: 7%; /* ボタンの高さと同じに設定 */
   text-align: center;
-  z-index: 3000;
+  z-index: 1000;
   vertical-align: middle; /* テキストを垂直方向に中央に配置 */
 }
 
