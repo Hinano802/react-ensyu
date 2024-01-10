@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchImages } from "./api";
+import { Card } from "./Card";
 
 async function fetchDogs(size, keyword) {
   const response = await fetch("dogs.json");
@@ -18,13 +18,6 @@ export default function App() {
   const [search, setSearch] = useState("");
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-  const handleImageClick = () => {
-    // 新しいウィンドウを開く
-    alert("画像がクリックされました");
-    /*
-    window.open(imageUrl, "_blank", "width=800,height=600");
-    */
   };
   useEffect(() => {
     (async () => {
@@ -72,18 +65,7 @@ export default function App() {
         <main>
           {dogs.map((jsondata) => {
             if (size === jsondata.size || size === "all") {
-              return (
-                <section className={jsondata.size}>
-                  <h2>{jsondata.breed}</h2>
-                  <p>{jsondata.size}</p>
-                  <img
-                    src={jsondata.image}
-                    alt={jsondata.breed}
-                    onClick={() => handleImageClick(jsondata.image)}
-                    style={{ cursor: "pointer" }}
-                  />
-                </section>
-              );
+              return <Card data={jsondata} />;
             }
           })}
         </main>

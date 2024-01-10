@@ -29,7 +29,20 @@ h1 {
   background-size: 48px 48px;
 }
 
-h2 {
+/* h2 {
+  font-size: 2rem;
+  color: pink;
+  text-align: left;
+  width: 200px;
+  position: absolute;
+  left: 4%;
+  z-index: 3000;
+  text-shadow: 2px 2px 1px black;
+  line-height: 2rem;
+  padding-top: 0.3rem;
+} */
+
+.breed {
   font-size: 2rem;
   color: pink;
   text-align: left;
