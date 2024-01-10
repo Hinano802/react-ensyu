@@ -43,7 +43,7 @@ h1 {
 } */
 
 .breed {
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: pink;
   text-align: left;
   width: 180px;
@@ -195,8 +195,8 @@ section p {
   width: 50px;
   height: 50px;
   line-height: 50px;
+  font-size: 1.2rem;
   text-align: center;
-  /*border-radius: 50%;*/
   box-shadow: 2px 2px 1px pink;
   position: absolute;
   right: 10px;
@@ -258,10 +258,10 @@ section p {
     margin-bottom: 10px;
   }
   #scrollToTopBtn {
-    left: 3%;
+    left: 2%;
     width: 17%;
     height: 5%;
     line-height: 5%;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
