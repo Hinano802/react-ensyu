@@ -1,24 +1,25 @@
 import { useState } from "react";
 import { DogDialog } from "./DogDialog";
 
-export function Card({ data }) {
+export function Card({ src }) {
   const [dialogOpen, setDialogOpen] = useState(false);
   const handleClose = () => {
     setDialogOpen(false);
   };
+  const name = src.match(/\/breeds\/([^/]+)\//);
 
   return (
-    <section className={data.size}>
-      <h2 className="breed">{data.breed}</h2>
-      <p>{data.size}</p>
+    <section>
+      <h2 className="breed">{name && name[1]}</h2>
       <img
-        src={data.image}
-        alt={data.breed}
+        src={src}
+        alt={name && name[1]}
         onClick={() => setDialogOpen(true)}
         style={{ cursor: "pointer" }}
       />
       <DogDialog
-        data={data}
+        src={src}
+        name={name && name[1]}
         dialogOpen={dialogOpen}
         handleClose={handleClose}
       />

@@ -1,41 +1,56 @@
 import { useEffect, useState } from "react";
 import { Card } from "./Card";
-
-async function fetchDogs(size, keyword) {
-  const response = await fetch("dogs.json");
-  const data = await response.json();
-  return data.filter((item) => {
-    return (
-      (size === "all" || size === item.size) &&
-      (!keyword || item.breed.includes(keyword))
-    );
-  });
-}
+import { fetchBreedsList } from "./fetchBreedsList";
+import { fetchDogs } from "./fetchDogs";
+import { Button } from "@mui/material";
 
 export default function App() {
+  const [breedList, setBreedList] = useState([]);
   const [dogs, setDogs] = useState([]);
   const [size, setSize] = useState("all");
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("all");
+  const [dogCount, setDogCount] = useState(9);
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  function shuffle(arr) {
+    if (Array.isArray(arr)) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    } else {
+      return arr;
+    }
+  }
+
   useEffect(() => {
     (async () => {
-      const data = await fetchDogs("all");
-      setDogs(data);
+      const data = await fetchDogs(search);
+      setDogs(shuffle(data));
+    })();
+  }, [search]);
+
+  useEffect(() => {
+    (async () => {
+      const data = await fetchBreedsList();
+      setBreedList(data.terrier);
     })();
   }, []);
+
   return (
     <>
       <header>
-        <h1>いぬフォトギャラリー</h1>
+        <h1>テリアフォトギャラリー</h1>
       </header>
       <div>
         <aside>
           <form
             onSubmit={async (event) => {
               event.preventDefault();
-              const size = event.target.elements.size.value;
+              const size = event.target.elements.searchTerm.value;
               const keyword = event.target.elements.searchTerm.value;
               const data = await fetchDogs(size, keyword);
               setDogs(data);
@@ -44,17 +59,16 @@ export default function App() {
             }}
           >
             <div>
-              <label htmlFor="searchTerm">犬種から探す</label>
-              <input size="text" id="searchTerm" placeholder="入力欄" />
-            </div>
-            <div>
-              <label htmlFor="size">サイズから探す</label>
-              <select id="size">
+              <label htmlFor="searchTerm">犬種を選ぶ</label>
+              <select id="searchTerm">
                 <option value="all">すべて</option>
-                <option value="超小型">超小型犬</option>
-                <option value="小型">小型犬</option>
-                <option value="中型">中型犬</option>
-                <option value="大型">大型犬</option>
+                {breedList.map((breed, index) => {
+                  return (
+                    <option value={breed} key={index}>
+                      {breed}-terrier
+                    </option>
+                  );
+                })}
               </select>
             </div>
             <div>
@@ -63,11 +77,23 @@ export default function App() {
           </form>
         </aside>
         <main>
-          {dogs.map((jsondata) => {
-            if (size === jsondata.size || size === "all") {
-              return <Card data={jsondata} />;
+          {Array.isArray(dogs) &&
+            dogs.slice(0, dogCount).map((src) => {
+              return <Card src={src} />;
+            })}
+          <Button
+            size="large"
+            variant="contained"
+            disabled={dogs.length - 1 < dogCount}
+            onClick={() => setDogCount(dogCount + 9)}
+            style={
+              dogs.length - 1 < dogCount
+                ? null
+                : { backgroundColor: "rgb(170, 80, 80)", color: "white" }
             }
-          })}
+          >
+            表示を増やす
+          </Button>
         </main>
       </div>
       <button id="scrollToTopBtn" onClick={scrollToTop}>
@@ -77,9 +103,8 @@ export default function App() {
         <p>5422083 古賀日南乃</p>
         <p>日本大学文理学部情報科学科 Webプログラミングの演習課題</p>
         <p>
-          Dog images are retrieved from Dog API
-          <br />
-          <a href="https://dog.ceo/dog-api/about">Donate to Dog API</a>
+          犬の画像は <a href="https://dog.ceo/dog-api/about">Dog API </a>{" "}
+          から取得しています。
         </p>
       </footer>
     </>

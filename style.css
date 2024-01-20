@@ -2,7 +2,7 @@
 
 html {
   font-family: sans-serif;
-  background-color: rgb(255, 235, 190);
+  background-color: rgb(255, 211, 173);
   font-size: 10px;
 }
 
@@ -24,8 +24,8 @@ h2 {
 h1 {
   color: rgb(55, 55, 55);
   font-size: 4rem;
-  background: url(images/dog.png) no-repeat 5% center,
-    url(images/dog.png) no-repeat 95% center;
+  background: url(public/images/dog.png) no-repeat 5% center,
+    url(public/images/dog.png) no-repeat 95% center;
   background-size: 48px 48px;
 }
 
@@ -44,7 +44,7 @@ h1 {
 
 .breed {
   font-size: 1.7rem;
-  color: pink;
+  color: rgb(255, 215, 220);
   text-align: left;
   width: 180px;
   position: absolute;
@@ -114,7 +114,7 @@ main {
 /* Form styling */
 
 aside {
-  background-color: mistyrose;
+  background-color: rgb(240, 183, 175);
   display: flex;
   flex-flow: column;
   align-items: stretch;
@@ -151,8 +151,8 @@ input {
 }
 
 button {
-  background: black;
-  color: pink;
+  background-color: indianred;
+  color: mistyrose;
   padding: 5px 0;
   border: none;
   border-radius: 10px;
@@ -163,7 +163,7 @@ button {
 /* Styling the products */
 
 main {
-  background-color: blanchedalmond;
+  background-color: rgb(255, 247, 220);
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -172,7 +172,7 @@ main {
 section {
   width: 30%;
   margin: 5px;
-  background-color: black;
+  background-color: rgb(30, 30, 30);
   position: relative;
   height: 215px;
 }
@@ -189,7 +189,7 @@ section img {
   bottom: 0;
 }
 
-section p {
+/* section p {
   color: whitesmoke;
   background: rgb(90, 0, 0);
   width: 50px;
@@ -202,14 +202,14 @@ section p {
   right: 10px;
   bottom: -6px;
   z-index: 500;
-}
+} */
 
 #scrollToTopBtn {
   position: fixed;
   bottom: 150px;
   left: 6.5%;
-  background-color: maroon;
-  color: pink;
+  background-color: rgb(230, 115, 75);
+  color: mistyrose;
   width: 20%;
   height: 7%;
   font-size: 2rem;
