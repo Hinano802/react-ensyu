@@ -3,6 +3,7 @@ import { Card } from "./Card";
 import { fetchBreedsList } from "./fetchBreedsList";
 import { fetchDogs } from "./fetchDogs";
 import { Button } from "@mui/material";
+import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
 
 export default function App() {
   const [breedList, setBreedList] = useState([]);
@@ -72,7 +73,14 @@ export default function App() {
               </select>
             </div>
             <div>
-              <button>条件を決定</button>
+              <Button
+                type="submit"
+                size="large"
+                variant="contained"
+                style={{ background: "rgb(205, 92, 92)", fontSize: "2rem" }}
+              >
+                条件を決定
+              </Button>
             </div>
           </form>
         </aside>
@@ -96,9 +104,9 @@ export default function App() {
           </Button>
         </main>
       </div>
-      <button id="scrollToTopBtn" onClick={scrollToTop}>
-        ページ上部に戻る
-      </button>
+      <Button id="scrollToTopBtn" onClick={scrollToTop}>
+        <ArrowCircleUpIcon />
+      </Button>
       <footer>
         <p>5422083 古賀日南乃</p>
         <p>日本大学文理学部情報科学科 Webプログラミングの演習課題</p>

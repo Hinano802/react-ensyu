@@ -6,11 +6,11 @@ export function Card({ src }) {
   const handleClose = () => {
     setDialogOpen(false);
   };
-  const name = src.match(/\/breeds\/([^/]+)\//);
+  const name = src.match(/\/breeds\/terrier-(\w+)\/n/);
 
   return (
     <section>
-      <h2 className="breed">{name && name[1]}</h2>
+      <h2 className="breed">{name && name[1]}-terrier</h2>
       <img
         src={src}
         alt={name && name[1]}
@@ -19,7 +19,7 @@ export function Card({ src }) {
       />
       <DogDialog
         src={src}
-        name={name && name[1]}
+        name={name && `${name[1]}-terrier`}
         dialogOpen={dialogOpen}
         handleClose={handleClose}
       />
